@@ -13,7 +13,7 @@ This is Team LJSQ's ECE285 project. We choose project B - style transfer，inclu
 ### Quick satrt
     .ipynb combines test.py and will show you our result from trained model.
 ### Train
-  'cd my-CycleGAN'
-  'python train.py --display_id 0 --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan'
+  cd my-CycleGAN
+  python train.py --display_id 0 --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 ### Test
-  'python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan'
+  python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan

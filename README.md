@@ -12,8 +12,8 @@ This is Team LJSQ's ECE285 project. We choose project B - style transfer，inclu
   * Torchvision
 ### Quick satrt
     .ipynb combines test.py and will show you our result from trained model.
+If you want to rerun the process, open GPU server terminal and do as follow
 ### Train
-afadfa
     cd ./my-CycleGAN
     python train.py --display_id 0 --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 ### Test

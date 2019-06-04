@@ -4,16 +4,7 @@
 This is Team LJSQ's ECE285 project. We choose project B - style transfer，including two parts, Neural Style Transfer and Image-to-Image Translation using Cycle-GANs.
 
 ## Neural Style Transfer
-### Prerequisites
-  * Python 3.3 or above
-  * Pytorch 0.4.0
-  * Torchvision
-### Getting Started
-  * Clone this repo:
-  git clone https://github.com/liiuuiil/ee285sp19.git
-  cd ee285sp19/nst
-  * Run neural style transfer
-  python nst.py 
+to be filled
 
 ## Image-to-Image Translation using Cycle-GANs
 ### Prerequisites
@@ -31,6 +22,8 @@ If you want to rerun the process, open GPU server terminal and do as follow
 ### Reults
 we focus on transfer from landscape photographs to two main artistic style, Pointillism and Baroque.
    * Pointillism style
+
+![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_B.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_A.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_fake_A.png)
 
 ![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_real_B.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch178_real_A.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_fake_A.png)
    * Baroque style

@@ -22,5 +22,5 @@ If you want to rerun the process, open GPU server terminal and do as follow
 ### Reults
 we focus on transfer from landscape photographs to two main artistic style, Pointillism and Baroque.
    * Pointillism style
-   
+   ![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_real_B.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch178_real_A.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_fake_A.png)
    * Baroque style

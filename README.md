@@ -4,7 +4,16 @@
 This is Team LJSQ's ECE285 project. We choose project B - style transfer，including two parts, Neural Style Transfer and Image-to-Image Translation using Cycle-GANs.
 
 ## Neural Style Transfer
-to be filled
+### Prerequisites
+  * Python 3.3 or above
+  * Pytorch 0.4.0
+  * Torchvision
+### Getting Started
+  * Clone this repo:
+    git clone https://github.com/liiuuiil/ee285sp19.git
+    cd ee285sp19/nst
+  * Run neural style transfer
+    python nst.py 
 
 ## Image-to-Image Translation using Cycle-GANs
 ### Prerequisites

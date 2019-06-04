@@ -121,7 +121,7 @@ def getmodel(style_img, content_img,content_layers,style_layers):
 
 
 
-def neural_style_transfer(input_img,content_img, style_img,
+def nst(input_img,content_img, style_img,
                        content_layers,style_layers,
                        style_weight=1000000, content_weight=1,T=2000,lr=0.001,):
     
@@ -131,27 +131,23 @@ def neural_style_transfer(input_img,content_img, style_img,
     for epoch in range(T):
         optimizer.zero_grad()
         model(input_img)
-        style_score = 0
-        content_score = 0
+        style_loss = 0
+        content_loss = 0
 
         for name, module in model.named_children():
             if 'Sloss' in name:
-                style_score += module.loss
+                style_loss += module.loss
             if 'Closs' in name:
-                content_score += module.loss
+                content_loss += module.loss
 
-        style_score *= style_weight
-        content_score *= content_weight
-
-        loss = style_score + content_score
+        loss = style_weight*style_loss + content_weight*content_loss
         loss.backward()
 
         optimizer.step()
         
         if epoch % 200 == 199:
             print("epoch : {}:".format(epoch+1))
-            print('Style Loss : {} Content Loss: {}'.format(
-                style_score.item(), content_score.item()))
+            print('Weighted Loss : {}'.format(loss.item()))
 
     input_img.data.clamp_(0, 1)
     return input_img
@@ -173,8 +169,8 @@ style_layers_3= [1,2,3]
 
 input_img = content_img.clone()
 
-output = neural_style_transfer(input_img,content_img, style_img,
-                                   content_layers=content_layers_0,style_layers=style_layers_0,)
+output = nst(input_img,content_img, style_img,
+             content_layers=content_layers_0,style_layers=style_layers_0,)
 
 
 

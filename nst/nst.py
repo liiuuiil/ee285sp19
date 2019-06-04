@@ -44,7 +44,15 @@ def myimshow(image, title,save=False,ax=plt):
         fig.savefig('{}.jpg'.format(title))
     return h
 
+class NormalizeModule(nn.Module):
+    def __init__(self):
+        super(NormalizeModule, self).__init__()
+        self.mean = torch.tensor([0.5, 0.5, 0.5]).view(-1, 1, 1).to(device)
+        self.std = torch.tensor([0.5, 0.5, 0.5]).view(-1, 1, 1).to(device)
 
+    def forward(self, x):
+        f = (x - self.mean) / self.std
+        return f
 
 
 class ClossModule(nn.Module):
@@ -58,9 +66,9 @@ class ClossModule(nn.Module):
         return x
 
 def gram_matrix(x):
-        a, b, c, d = x.size()  
-        f = x.view(a * b, c * d)  
-        G = torch.mm(f, f.t())/(a*b*c*d)  
+        B, N, W, H = x.size()  
+        f = x.view(B*N, W*H)  
+        G = torch.mm(f, f.t())/(B*N*W*H)  
         return G
 
 
@@ -81,7 +89,9 @@ class SlossModule(nn.Module):
 def getmodel(style_img, content_img,content_layers,style_layers):
     
     vgg = tv.models.vgg19(pretrained=True).features.to(device)
+    
     model = nn.Sequential()
+    model.add_module('Normalization', NormalizeModule().to(device))
 
     i = 0  
     j = 0
@@ -120,12 +130,14 @@ def getmodel(style_img, content_img,content_layers,style_layers):
 
 def nst(input_img,content_img, style_img,
                        content_layers,style_layers,
-                       style_weight=1000000, content_weight=1,T=2000,lr=0.001,):
+                       style_weight=1000000, content_weight=1,tol=np.inf,T=3000,lr=0.001):
     
     model = getmodel(style_img, content_img,content_layers,style_layers)
     optimizer = torch.optim.Adam([input_img.requires_grad_()],lr=lr)
-
-    for epoch in range(T):
+    
+    epoch=0
+    running_loss=np.inf
+    while epoch<T or running_loss>tol:
         optimizer.zero_grad()
         model(input_img)
         style_loss = 0
@@ -142,13 +154,15 @@ def nst(input_img,content_img, style_img,
 
         optimizer.step()
         
-        if epoch % 200 == 199:
+        epoch += 1
+        running_loss = loss.item()
+        if epoch % 300 == 299:
             print("epoch : {}:".format(epoch+1))
-            print('Weighted Loss : {}'.format(loss.item()))
+            print('Weighted Loss : {}'.format(running_loss))
 
     input_img.data.clamp_(0, 1)
     return input_img
-
+    return input_img
 
 style_img = getimage('starry.jpg')
 content_img = getimage('house.jpg')

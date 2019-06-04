@@ -19,9 +19,17 @@ cd ee285sp19/nst
 python nst.py 
 ```
 - Example display
-<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/house.png" />
-<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/starrynight.png" />
-<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/output.jpg" />
+<div class="row">
+  <div class="column">
+    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/house.png">
+  </div>
+  <div class="column">
+    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/starrynight.png">
+  </div>
+  <div class="column">
+    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/output.jpg">
+  </div>
+</div>
     
     
 ## Image-to-Image Translation using Cycle-GANs

@@ -19,8 +19,8 @@ cd ee285sp19/nst
 python nst.py 
 ```
 - Example display
-<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/house.jpg" />
-<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/starrynight.jpg" />
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/house.png" />
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/starrynight.png" />
 <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/output.jpg" />
     
     

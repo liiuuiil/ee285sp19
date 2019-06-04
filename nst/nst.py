@@ -50,7 +50,7 @@ def myimshow(image, title,save=False,ax=plt):
 class ClossModule(nn.Module):
 
     def __init__(self, f_content,):
-        super(ContentLoss, self).__init__()
+        super(ClossModule, self).__init__()
         self.f_content = f_content.detach()
 
     def forward(self, x):
@@ -63,7 +63,7 @@ class ClossModule(nn.Module):
 class SlossModule(nn.Module):
 
     def __init__(self, f_style):
-        super(StyleLoss, self).__init__()
+        super(SlossModule, self).__init__()
         self.G_style = gram_matrix(f_style).detach()
 
     def forward(self, x):

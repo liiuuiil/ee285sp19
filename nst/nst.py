@@ -162,7 +162,7 @@ def nst(input_img,content_img, style_img,
 
     input_img.data.clamp_(0, 1)
     return input_img
-    return input_img
+ 
 
 style_img = getimage('starry.jpg')
 content_img = getimage('house.jpg')

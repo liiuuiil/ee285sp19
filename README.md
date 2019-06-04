@@ -18,3 +18,8 @@ If you want to rerun the process, open GPU server terminal and do as follow
     python train.py --display_id 0 --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 ### Test
     python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
+### Reults
+we focus on transfer from landscape photographs to two main artistic style, Pointillism and Baroque.
+   * Pointillism 
+   
+   * Baroque

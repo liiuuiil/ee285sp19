@@ -20,7 +20,7 @@ If you want to rerun the process, open GPU server terminal and do as follow
 #### Test
     python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 ### Reults
-we focus on transfer from landscape photographs to two main artistic style, Pointillism and Baroque.
+we focus on transferring from landscape photographs to two main artistic styles, Pointillism and Baroque.
    * Pointillism style
 
 ![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_B.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_A.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_fake_A.png)

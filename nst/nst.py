@@ -14,14 +14,7 @@ import matplotlib.pyplot as plt
 import torchvision as tv
 
 
-# In[239]:
-
-
 device = 'cuda' if torch.cuda.is_available() else 'cpu' 
-
-
-# In[240]:
-
 
 def getimage(image_path,image_size=(512,512)):
     transform = tv.transforms.Compose([
@@ -33,16 +26,9 @@ def getimage(image_path,image_size=(512,512)):
     img = img[None,:,:,:]
     return img.to(device, torch.float)
 
-
-# In[241]:
-
-
-style_img = getimage('starry.jpg')
+#starry.jpg and house.jpg should be replaced by the path of the image chosen.
+style_img = getimage('starry.jpg') 
 content_img = getimage('house.jpg')
-
-
-# In[242]:
-
 
 def myimshow(image, title,ax=plt):
     plt.figure()  
@@ -54,16 +40,8 @@ def myimshow(image, title,ax=plt):
     ax.axis('off') 
     return h
 
-
-# In[243]:
-
-
 myimshow(style_img,'style_img')
 myimshow(content_img,'content_img')
-
-
-# In[244]:
-
 
 class ContentLoss(nn.Module):
 
@@ -75,10 +53,6 @@ class ContentLoss(nn.Module):
         self.loss = F.mse_loss(x, self.f_content)
         return x
 
-
-# In[245]:
-
-
 def gram_matrix(x):
     a, b, c, d = x.size()  
 
@@ -86,9 +60,6 @@ def gram_matrix(x):
 
     G = torch.mm(features, features.t())  
     return G.div(a * b * c * d)
-
-
-# In[246]:
 
 
 class StyleLoss(nn.Module):
@@ -101,9 +72,6 @@ class StyleLoss(nn.Module):
         G = gram_matrix(x)
         self.loss = F.mse_loss(G, self.f_style)
         return x
-
-
-# In[247]:
 
 
 content_layers_default = ['conv_4']
@@ -122,11 +90,7 @@ def getmodel(style_img, content_img,
                                style_layers=style_layers_default):
     
     vgg = tv.models.vgg19(pretrained=True).features.to(device)
-
-
-    
     model = nn.Sequential()
-
     i = 0  
     j = 0
     m = 0
@@ -214,26 +178,12 @@ def style_transfer(input_img,content_img, style_img,
     return input_img
 
 
-# In[251]:
 
 
 output = style_transfer(input_img,content_img, style_img)
 
 
-# In[252]:
 
 
 myimshow(output.detach(),'output')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 

@@ -13,8 +13,9 @@ This is Team LJSQ's ECE285 project. We choose project B - style transfer，inclu
 ### Quick satrt
     .ipynb combines test.py and will show you our result from trained model.
 ### Train
-    Open GPU server terminal, do as follow
+### Open GPU server terminal, do as follow
     cd ./my-CycleGAN
+    
     python train.py --display_id 0 --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 ### Test
     python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan

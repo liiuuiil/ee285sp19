@@ -186,5 +186,6 @@ output = nst(input_img,content_img, style_img,
 
 
 myimshow(output.detach(),'output',save=True)
+print('output image saved as output.jpg')
 
 

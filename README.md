@@ -11,7 +11,7 @@ This is Team LJSQ's ECE285 project. We choose project B - style transfer，inclu
 ### Getting Started
 - Clone this repo:
 ```
-git clone https://github.com/liiuuiil/ee285sp19.git
+git clone https://github.com/liiuuiil/ee285sp19
 cd ee285sp19/nst
 ```
 - Run neural style transfer

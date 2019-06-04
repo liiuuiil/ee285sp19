@@ -49,12 +49,12 @@ def myimshow(image, title,save=False,ax=plt):
 
 class ContentLoss(nn.Module):
 
-    def __init__(self, target,):
+    def __init__(self, f_content,):
         super(ContentLoss, self).__init__()
-        self.target = target.detach()
+        self.f_content = f_content.detach()
 
     def forward(self, x):
-        self.loss = F.mse_loss(x, self.target)
+        self.loss = F.mse_loss(x, self.f_content)
         return x
 
 
@@ -62,8 +62,8 @@ class ContentLoss(nn.Module):
 
 def gram_matrix(x):
     a, b, c, d = x.size()  
-    features = x.view(a * b, c * d)  
-    G = torch.mm(features, features.t())/(a*b*c*d)  
+    f = x.view(a * b, c * d)  
+    G = torch.mm(f, f.t())/(a*b*c*d)  
     return G
 
 
@@ -71,13 +71,13 @@ def gram_matrix(x):
 
 class StyleLoss(nn.Module):
 
-    def __init__(self, target_feature):
+    def __init__(self, f_style):
         super(StyleLoss, self).__init__()
-        self.target = gram_matrix(target_feature).detach()
+        self.G_style = gram_matrix(f_style).detach()
 
     def forward(self, x):
-        G = gram_matrix(x)
-        self.loss = F.mse_loss(G, self.target)
+        G_input = gram_matrix(x)
+        self.loss = F.mse_loss(G_input, self.G_style)
         return x
 
 
@@ -105,18 +105,16 @@ def getmodel(style_img, content_img,content_layers,style_layers):
         model.add_module(name, layer)
 
         if name[5:] in str(content_layers):
-            # add content loss:
             m += 1
-            target = model(content_img).detach()
-            content_loss = ContentLoss(target)
+            f_content = model(content_img).detach()
+            content_loss = ContentLoss(f_content)
             model.add_module("content_loss_{}".format(m), content_loss)
           
 
         if name[5:] in str(style_layers):
-            # add style loss:
             n += 1
-            target_feature = model(style_img).detach()
-            style_loss = StyleLoss(target_feature)
+            f_style = model(style_img).detach()
+            style_loss = StyleLoss(f_style)
             model.add_module("style_loss_{}".format(n), style_loss)
             
         if m==len(content_layers) and n==len(style_layers):

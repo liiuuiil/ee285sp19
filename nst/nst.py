@@ -57,7 +57,11 @@ class ClossModule(nn.Module):
         self.loss = F.mse_loss(x, self.f_content)
         return x
 
-
+def gram_matrix(x):
+        a, b, c, d = x.size()  
+        f = x.view(a * b, c * d)  
+        G = torch.mm(f, f.t())/(a*b*c*d)  
+        return G
 
 
 class SlossModule(nn.Module):
@@ -78,13 +82,6 @@ def getmodel(style_img, content_img,content_layers,style_layers):
     
     vgg = tv.models.vgg19(pretrained=True).features.to(device)
     model = nn.Sequential()
-    
-    def gram_matrix(x):
-        a, b, c, d = x.size()  
-        f = x.view(a * b, c * d)  
-        G = torch.mm(f, f.t())/(a*b*c*d)  
-        return G
-
 
     i = 0  
     j = 0

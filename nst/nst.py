@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[92]:
-
-
 import numpy as np 
 import torch
 from torch import nn
@@ -14,13 +11,11 @@ import matplotlib.pyplot as plt
 import torchvision as tv
 
 
-# In[93]:
 
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu' 
 
 
-# In[94]:
 
 
 def getimage(image_path,image_size=(512,512)):
@@ -34,7 +29,6 @@ def getimage(image_path,image_size=(512,512)):
     return img.to(device, torch.float)
 
 
-# In[95]:
 
 
 def myimshow(image, title,save=False,ax=plt):
@@ -51,7 +45,6 @@ def myimshow(image, title,save=False,ax=plt):
     return h
 
 
-# In[96]:
 
 
 class ContentLoss(nn.Module):
@@ -65,7 +58,6 @@ class ContentLoss(nn.Module):
         return x
 
 
-# In[97]:
 
 
 def gram_matrix(x):
@@ -75,7 +67,6 @@ def gram_matrix(x):
     return G
 
 
-# In[98]:
 
 
 class StyleLoss(nn.Module):
@@ -90,7 +81,6 @@ class StyleLoss(nn.Module):
         return x
 
 
-# In[99]:
 
 
 def getmodel(style_img, content_img,content_layers,style_layers):
@@ -134,8 +124,6 @@ def getmodel(style_img, content_img,content_layers,style_layers):
     return model
 
 
-# In[107]:
-
 
 def style_transfer(input_img,content_img, style_img,
                        content_layers,style_layers,
@@ -174,16 +162,11 @@ def style_transfer(input_img,content_img, style_img,
     return input_img
 
 
-# In[108]:
-
-
 style_img = getimage('starry.jpg')
 content_img = getimage('house.jpg')
 myimshow(style_img,'style_img')
 myimshow(content_img,'content_img')
 
-
-# In[109]:
 
 
 content_layers_0 = [4]
@@ -193,32 +176,12 @@ style_layers_2= [1,2]
 style_layers_3= [1,2,3]
 
 
-# In[110]:
-
-
 input_img = content_img.clone()
-
-
-# In[111]:
-
 
 output = style_transfer(input_img,content_img, style_img,content_layers=content_layers_0,style_layers=style_layers_0,)
 
 
-# In[112]:
-
 
 myimshow(output.detach(),'output',save=True)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 

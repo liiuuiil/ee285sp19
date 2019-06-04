@@ -47,7 +47,7 @@ def myimshow(image, title,save=False,ax=plt):
 
 
 
-class ContentLoss(nn.Module):
+class ClossModule(nn.Module):
 
     def __init__(self, f_content,):
         super(ContentLoss, self).__init__()
@@ -60,16 +60,7 @@ class ContentLoss(nn.Module):
 
 
 
-def gram_matrix(x):
-    a, b, c, d = x.size()  
-    f = x.view(a * b, c * d)  
-    G = torch.mm(f, f.t())/(a*b*c*d)  
-    return G
-
-
-
-
-class StyleLoss(nn.Module):
+class SlossModule(nn.Module):
 
     def __init__(self, f_style):
         super(StyleLoss, self).__init__()
@@ -87,6 +78,13 @@ def getmodel(style_img, content_img,content_layers,style_layers):
     
     vgg = tv.models.vgg19(pretrained=True).features.to(device)
     model = nn.Sequential()
+    
+    def gram_matrix(x):
+        a, b, c, d = x.size()  
+        f = x.view(a * b, c * d)  
+        G = torch.mm(f, f.t())/(a*b*c*d)  
+        return G
+
 
     i = 0  
     j = 0
@@ -107,15 +105,15 @@ def getmodel(style_img, content_img,content_layers,style_layers):
         if name[5:] in str(content_layers):
             m += 1
             f_content = model(content_img).detach()
-            content_loss = ContentLoss(f_content)
-            model.add_module("content_loss_{}".format(m), content_loss)
+            Closs = ClossModule(f_content)
+            model.add_module("Closs_{}".format(m), Closs)
           
 
         if name[5:] in str(style_layers):
             n += 1
             f_style = model(style_img).detach()
-            style_loss = StyleLoss(f_style)
-            model.add_module("style_loss_{}".format(n), style_loss)
+            Sloss = SlossModule(f_style)
+            model.add_module("Sloss_{}".format(n), Sloss)
             
         if m==len(content_layers) and n==len(style_layers):
             break
@@ -123,7 +121,7 @@ def getmodel(style_img, content_img,content_layers,style_layers):
 
 
 
-def style_transfer(input_img,content_img, style_img,
+def neural_style_transfer(input_img,content_img, style_img,
                        content_layers,style_layers,
                        style_weight=1000000, content_weight=1,T=2000,lr=0.001,):
     
@@ -131,16 +129,15 @@ def style_transfer(input_img,content_img, style_img,
     optimizer = torch.optim.Adam([input_img.requires_grad_()],lr=lr)
 
     for epoch in range(T):
-        input_img.data.clamp_(0, 1)
         optimizer.zero_grad()
         model(input_img)
         style_score = 0
         content_score = 0
 
         for name, module in model.named_children():
-            if 'style_loss_' in name:
+            if 'Sloss' in name:
                 style_score += module.loss
-            if 'content_loss' in name:
+            if 'Closs' in name:
                 content_score += module.loss
 
         style_score *= style_weight
@@ -152,8 +149,8 @@ def style_transfer(input_img,content_img, style_img,
         optimizer.step()
         
         if epoch % 200 == 199:
-            print("run {}:".format(epoch+1))
-            print('Style Loss : {:4f} Content Loss: {:4f}'.format(
+            print("epoch : {}:".format(epoch+1))
+            print('Style Loss : {} Content Loss: {}'.format(
                 style_score.item(), content_score.item()))
 
     input_img.data.clamp_(0, 1)
@@ -176,7 +173,8 @@ style_layers_3= [1,2,3]
 
 input_img = content_img.clone()
 
-output = style_transfer(input_img,content_img, style_img,content_layers=content_layers_0,style_layers=style_layers_0,)
+output = neural_style_transfer(input_img,content_img, style_img,
+                                   content_layers=content_layers_0,style_layers=style_layers_0,)
 
 
 

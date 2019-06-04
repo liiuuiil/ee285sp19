@@ -21,13 +21,13 @@ python nst.py
 - Example display
 <div class="row">
   <div class="column">
-    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/house.png">
+    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/house.png", style="width:100%">
   </div>
   <div class="column">
-    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/starrynight.png">
+    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/starrynight.png", style="width:100%">
   </div>
   <div class="column">
-    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/output.jpg">
+    <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/nstoutput/output.jpg", style="width:100%">
   </div>
 </div>
     

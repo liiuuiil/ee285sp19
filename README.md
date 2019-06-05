@@ -41,7 +41,7 @@ we focus on transferring from landscape photographs to two main artistic styles,
    * Pointillism style
    
    
-<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_fake_A.png" width="200"/>
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_fake_B.png" width="150"/>
 
 <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_fake_B.png" width="200"/>
 

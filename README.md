@@ -39,8 +39,12 @@ If you want to rerun the process, open GPU server terminal and do as follow
 ### Reults
 we focus on transferring from landscape photographs to two main artistic styles, Pointillism and Baroque.
    * Pointillism style
+   
+   
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch158_fake_A.png" width="200"/>
 
-![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_B.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_A.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_fake_A.png)
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch198_fake_B.png" width="200"/>
 
-![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_real_B.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch178_real_A.png)![image](https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_fake_A.png)
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_fake_B.png" width="200"/>
+
    * Baroque style

@@ -62,13 +62,13 @@ class ClossModule(nn.Module):
         self.f_content = f_content.detach()
 
     def forward(self, x):
-        self.loss = F.mse_loss(x, self.f_content)
+        self.loss = F.mse_loss(x, self.f_content)/2
         return x
 
 def gram_matrix(x):
         B, N, W, H = x.size()  
         f = x.view(B*N, W*H)  
-        G = torch.mm(f, f.t())/(B*N*W*H)  
+        G = torch.mm(f, f.t())/(2*B*N*W*H)  
         return G
 
 

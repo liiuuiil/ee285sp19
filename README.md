@@ -47,4 +47,9 @@ we focus on transferring from landscape photographs to two main artistic styles,
 
 <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Pointillism%20style/epoch180_fake_B.png" width="200"/>
 
-   * Baroque style
+   * Abstract Expressionism style
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/179_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/179_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/179_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/179_fake_B.png" width="200"/>
+
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_fake_B.png" width="200"/>
+
+<img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_fake_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_fake_B.png" width="200"/>

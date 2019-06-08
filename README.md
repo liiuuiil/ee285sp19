@@ -28,7 +28,7 @@ python nst.py
   * Python 3.3 or above
   * Pytorch 0.4.0
   * Torchvision
-### Quick satrt
+### Quick start
     .ipynb combines test.py and will show you our result from trained model.
 If you want to rerun the process, open GPU server terminal and do as follow
 #### Train

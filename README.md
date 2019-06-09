@@ -38,7 +38,7 @@ Download or git clone our project to your GPU server.
 #### Test
     cd ./ dir you save the file (if you skip train step)
     python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
-### Reults
+### Results
 we focus on transferring from landscape photographs to two artistic styles, Pointillism and Abstract Expressionism style.
    * Pointillism style
    

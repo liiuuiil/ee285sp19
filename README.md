@@ -33,7 +33,8 @@ python nst.py
 If you want to rerun the process, open GPU server terminal and do as follow.
 Download or git clone our project to your GPU server.
 Download checkpoints for cycle-GANs at https://drive.google.com/file/d/1gWMMvxNYSieGRgjfeb4VQfyWxWMoK_Qy/view?usp=sharing using your UCSD email, then save checkpoints in your file path.
-Do not change any names of files, in case of meet any accidental problems when using the following commands.
+
+Do not change any name of file, in case of meeting any accidental problem when using the following commands.
 #### Train
     cd ./ dir of our file 'ee285sp19'
     python train.py --display_id 0 --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan

@@ -32,13 +32,15 @@ python nst.py
     demo.ipynb contains test.py and will show you all the results.
 If you want to rerun the process, open GPU server terminal and do as follow.
 Download or git clone our project to your GPU server.
+Download checkpoints for cycle-GANs at https://drive.google.com/file/d/1gWMMvxNYSieGRgjfeb4VQfyWxWMoK_Qy/view?usp=sharing using your UCSD email, then save checkpoints in your file path.
 #### Train
-    cd ./ dir you save the file
+    cd ./ dir of our file 'ee285sp19'
     python train.py --display_id 0 --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 #### Test
-    cd ./ dir you save the file (if you skip train step)
+    cd ./ dir of our file 'ee285sp19'(if you skip train step)
     python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 ### Results
+    check test results at the newly produced 'cycleGANs_outputs' file
 we focus on transferring from landscape photographs to two artistic styles, Pointillism and Abstract Expressionism style.
    * Pointillism style
    

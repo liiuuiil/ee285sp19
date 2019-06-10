@@ -44,7 +44,7 @@ Do not change any name of file, in case of meeting any accidental problem when u
     python test.py --dataroot ./datasets/285cyclegan --name 285cyclegan_cyclegan --model cycle_gan
 ### Results
     check test results at the newly produced 'cycleGANs_outputs' file
-we focus on transferring from landscape photographs to two artistic styles, Pointillism and Abstract Expressionism style.
+We think highly of the quality of transferring from landscape photographs to two artistic styles, Pointillism and Abstract Expressionism style.
    * Pointillism style
    
    
@@ -62,3 +62,5 @@ we focus on transferring from landscape photographs to two artistic styles, Poin
 <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_fake_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/136_fake_A.png" width="200"/>
 
 <img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_real_A.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_real_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_fake_B.png" width="200"/><img src="https://github.com/liiuuiil/ee285sp19/blob/master/image/Abstract%20Expressionism%20style/256_fake_A.png" width="200"/>
+
+Have fun with it!

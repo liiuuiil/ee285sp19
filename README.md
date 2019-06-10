@@ -32,7 +32,8 @@ python nst.py
     demo.ipynb contains test.py and will show you all the results.
 If you want to rerun the process, open GPU server terminal and do as follow.
 Download or git clone our project to your GPU server.
-Download checkpoints for cycle-GANs at https://drive.google.com/file/d/1gWMMvxNYSieGRgjfeb4VQfyWxWMoK_Qy/view?usp=sharing using your UCSD email, then save checkpoints in your file path.
+
+We include checkpoints file in our project. Since the original checkpoints is over 8G, the current checkpoints only contain the latest training model and loss we get. We have also attached the link of checkpoints at https://drive.google.com/file/d/1gWMMvxNYSieGRgjfeb4VQfyWxWMoK_Qy/view?usp=sharing using your UCSD email, then save checkpoints in your file path.
 
 Do not change any name of file, in case of meeting any accidental problem when using the following commands.
 #### Train
